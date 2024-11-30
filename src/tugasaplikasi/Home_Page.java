@@ -145,6 +145,7 @@ public class Home_Page extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     private void execute() {
+       ImageIcon iconHome = new ImageIcon(getClass().getResource("/Icon/Home.png")); 
        ImageIcon iconMaster = new ImageIcon(getClass().getResource("/Icon/Folder.png"));
        ImageIcon iconDate = new ImageIcon(getClass().getResource("/Icon/Calendar.png"));
        ImageIcon iconDaftar = new ImageIcon(getClass().getResource("/Icon/Form.png"));
@@ -157,11 +158,12 @@ public class Home_Page extends javax.swing.JFrame {
        MenuItem TanggalPKL_PPL = new MenuItem(null, true, iconDate, "Jadwal PKL/PPL", null);
        MenuItem TanggalWisuda = new MenuItem(null, true, iconDate, "Jadwal Wisuda", null);
 
+       MenuItem menuHome  = new MenuItem(iconHome, false, null, "Home", null);
        MenuItem menuDaftar  = new MenuItem(iconDaftar, false, null, "Pendaftaran", null, KKN, PKL_PPL, Wisuda);
        MenuItem menuTanggal  = new MenuItem(iconDate, false, null, "Tanggal Pelaksanaan", null, TanggalKKN, TanggalPKL_PPL, TanggalWisuda);
        MenuItem menuReport  = new MenuItem(iconMaster, false, null, "Report", null);
        
-       addMenu(menuDaftar, menuTanggal, menuReport);
+       addMenu(menuHome, menuDaftar, menuTanggal, menuReport);
     }
     
     private void addMenu(MenuItem... menu) {
