@@ -41,6 +41,11 @@ public class Home_Page extends javax.swing.JFrame {
         pn_utama = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
 
         pn_navbar.setBackground(new java.awt.Color(0, 204, 153));
 
@@ -111,6 +116,12 @@ public class Home_Page extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+        pn_utama.add(new Content_BG());
+        pn_utama.repaint();
+        pn_utama.revalidate();
+    }//GEN-LAST:event_formWindowOpened
+
     /**
      * @param args the command line arguments
      */
@@ -158,7 +169,7 @@ public class Home_Page extends javax.swing.JFrame {
 
     private void execute() {
        ImageIcon iconHome = new ImageIcon(getClass().getResource("/Icon/Home.png")); 
-       ImageIcon iconMaster = new ImageIcon(getClass().getResource("/Icon/Folder.png"));
+       ImageIcon iconUser = new ImageIcon(getClass().getResource("/Icon/User.png"));
        ImageIcon iconDate = new ImageIcon(getClass().getResource("/Icon/Calendar.png"));
        ImageIcon iconDaftar = new ImageIcon(getClass().getResource("/Icon/Form.png"));
        
@@ -173,9 +184,9 @@ public class Home_Page extends javax.swing.JFrame {
        MenuItem menuHome  = new MenuItem(iconHome, false, null, "Home", null);
        MenuItem menuDaftar  = new MenuItem(iconDaftar, false, null, "Pendaftaran", null, KKN, PKL_PPL, Wisuda);
        MenuItem menuTanggal  = new MenuItem(iconDate, false, null, "Tanggal Pelaksanaan", null, TanggalKKN, TanggalPKL_PPL, TanggalWisuda);
-       MenuItem menuReport  = new MenuItem(iconMaster, false, null, "Report", null);
+       MenuItem menuProfile  = new MenuItem(iconUser, false, null, "Profile", null);
        
-       addMenu(menuHome, menuDaftar, menuTanggal, menuReport);
+       addMenu(menuHome, menuDaftar, menuTanggal, menuProfile);
     }
     
     private void addMenu(MenuItem... menu) {
