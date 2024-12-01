@@ -33,6 +33,7 @@ public class Home_Page extends javax.swing.JFrame {
     private void initComponents() {
 
         pn_navbar = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
         pn_sidebar = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         pn_menu = new javax.swing.JPanel();
@@ -43,15 +44,23 @@ public class Home_Page extends javax.swing.JFrame {
 
         pn_navbar.setBackground(new java.awt.Color(0, 204, 153));
 
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/Logo UNWAHAS.png"))); // NOI18N
+
         javax.swing.GroupLayout pn_navbarLayout = new javax.swing.GroupLayout(pn_navbar);
         pn_navbar.setLayout(pn_navbarLayout);
         pn_navbarLayout.setHorizontalGroup(
             pn_navbarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 872, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pn_navbarLayout.createSequentialGroup()
+                .addContainerGap(624, Short.MAX_VALUE)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         pn_navbarLayout.setVerticalGroup(
             pn_navbarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 70, Short.MAX_VALUE)
+            .addGroup(pn_navbarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(10, Short.MAX_VALUE))
         );
 
         getContentPane().add(pn_navbar, java.awt.BorderLayout.PAGE_START);
@@ -73,12 +82,12 @@ public class Home_Page extends javax.swing.JFrame {
         );
         pn_sidebarLayout.setVerticalGroup(
             pn_sidebarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 495, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 501, Short.MAX_VALUE)
         );
 
         getContentPane().add(pn_sidebar, java.awt.BorderLayout.LINE_START);
 
-        pn_content.setBackground(new java.awt.Color(255, 255, 255));
+        pn_content.setBackground(new java.awt.Color(0, 204, 153));
 
         pn_utama.setBackground(new java.awt.Color(255, 255, 255));
         pn_utama.setLayout(new java.awt.BorderLayout());
@@ -87,7 +96,9 @@ public class Home_Page extends javax.swing.JFrame {
         pn_content.setLayout(pn_contentLayout);
         pn_contentLayout.setHorizontalGroup(
             pn_contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pn_utama, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pn_contentLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(pn_utama, javax.swing.GroupLayout.DEFAULT_SIZE, 616, Short.MAX_VALUE))
         );
         pn_contentLayout.setVerticalGroup(
             pn_contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -136,6 +147,7 @@ public class Home_Page extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JPanel pn_content;
     private javax.swing.JPanel pn_menu;
