@@ -117,7 +117,7 @@ public class Home_Page extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
-        pn_utama.add(new Content_BG());
+        pn_utama.add(new Content_Home());
         pn_utama.repaint();
         pn_utama.revalidate();
     }//GEN-LAST:event_formWindowOpened
