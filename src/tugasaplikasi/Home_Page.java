@@ -4,6 +4,8 @@
  */
 package tugasaplikasi;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import javax.swing.ImageIcon;
 
@@ -173,7 +175,15 @@ public class Home_Page extends javax.swing.JFrame {
        ImageIcon iconDate = new ImageIcon(getClass().getResource("/Icon/Calendar.png"));
        ImageIcon iconDaftar = new ImageIcon(getClass().getResource("/Icon/Form.png"));
        
-       MenuItem KKN = new MenuItem(null, true, iconDaftar, "Daftar KKN", null);
+       MenuItem KKN = new MenuItem(null, true, iconDaftar, "Daftar KKN", new ActionListener() {
+           @Override
+           public void actionPerformed(ActionEvent ae) {
+                pn_utama.removeAll();
+                pn_utama.add(new Daftar_KKN());
+                pn_utama.repaint();
+                pn_utama.revalidate();
+           }
+       } );
        MenuItem PKL_PPL = new MenuItem(null, true, iconDaftar, "Daftar PKL/PPL", null);
        MenuItem Wisuda = new MenuItem(null, true, iconDaftar, "Daftar Wisuda", null);
        
@@ -181,7 +191,15 @@ public class Home_Page extends javax.swing.JFrame {
        MenuItem TanggalPKL_PPL = new MenuItem(null, true, iconDate, "Jadwal PKL/PPL", null);
        MenuItem TanggalWisuda = new MenuItem(null, true, iconDate, "Jadwal Wisuda", null);
 
-       MenuItem menuHome  = new MenuItem(iconHome, false, null, "Home", null);
+       MenuItem menuHome  = new MenuItem(iconHome, false, null, "Home", new ActionListener() {
+           @Override
+           public void actionPerformed(ActionEvent ae) {
+                pn_utama.removeAll();
+                pn_utama.add(new Content_Home());
+                pn_utama.repaint();
+                pn_utama.revalidate();
+           }
+       });
        MenuItem menuDaftar  = new MenuItem(iconDaftar, false, null, "Pendaftaran", null, KKN, PKL_PPL, Wisuda);
        MenuItem menuTanggal  = new MenuItem(iconDate, false, null, "Tanggal Pelaksanaan", null, TanggalKKN, TanggalPKL_PPL, TanggalWisuda);
        MenuItem menuProfile  = new MenuItem(iconUser, false, null, "Profile", null);
