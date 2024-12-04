@@ -36,11 +36,11 @@ public class Home_Page extends javax.swing.JFrame {
 
         pn_navbar = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
+        pn_content = new javax.swing.JPanel();
+        pn_utama = new javax.swing.JPanel();
         pn_sidebar = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         pn_menu = new javax.swing.JPanel();
-        pn_content = new javax.swing.JPanel();
-        pn_utama = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -72,6 +72,26 @@ public class Home_Page extends javax.swing.JFrame {
 
         getContentPane().add(pn_navbar, java.awt.BorderLayout.PAGE_START);
 
+        pn_content.setBackground(new java.awt.Color(0, 204, 153));
+
+        pn_utama.setBackground(new java.awt.Color(255, 255, 255));
+        pn_utama.setLayout(new java.awt.BorderLayout());
+
+        javax.swing.GroupLayout pn_contentLayout = new javax.swing.GroupLayout(pn_content);
+        pn_content.setLayout(pn_contentLayout);
+        pn_contentLayout.setHorizontalGroup(
+            pn_contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pn_contentLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(pn_utama, javax.swing.GroupLayout.DEFAULT_SIZE, 616, Short.MAX_VALUE))
+        );
+        pn_contentLayout.setVerticalGroup(
+            pn_contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(pn_utama, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        getContentPane().add(pn_content, java.awt.BorderLayout.CENTER);
+
         pn_sidebar.setBackground(new java.awt.Color(255, 255, 255));
         pn_sidebar.setPreferredSize(new java.awt.Dimension(250, 330));
 
@@ -93,26 +113,6 @@ public class Home_Page extends javax.swing.JFrame {
         );
 
         getContentPane().add(pn_sidebar, java.awt.BorderLayout.LINE_START);
-
-        pn_content.setBackground(new java.awt.Color(0, 204, 153));
-
-        pn_utama.setBackground(new java.awt.Color(255, 255, 255));
-        pn_utama.setLayout(new java.awt.BorderLayout());
-
-        javax.swing.GroupLayout pn_contentLayout = new javax.swing.GroupLayout(pn_content);
-        pn_content.setLayout(pn_contentLayout);
-        pn_contentLayout.setHorizontalGroup(
-            pn_contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pn_contentLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(pn_utama, javax.swing.GroupLayout.DEFAULT_SIZE, 616, Short.MAX_VALUE))
-        );
-        pn_contentLayout.setVerticalGroup(
-            pn_contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pn_utama, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-
-        getContentPane().add(pn_content, java.awt.BorderLayout.CENTER);
 
         setSize(new java.awt.Dimension(888, 573));
         setLocationRelativeTo(null);
@@ -184,8 +184,26 @@ public class Home_Page extends javax.swing.JFrame {
                 pn_utama.revalidate();
            }
        } );
-       MenuItem PKL_PPL = new MenuItem(null, true, iconDaftar, "Daftar PKL/PPL", null);
-       MenuItem Wisuda = new MenuItem(null, true, iconDaftar, "Daftar Wisuda", null);
+       
+       MenuItem PKL_PPL = new MenuItem(null, true, iconDaftar, "Daftar PKL/PPL", new ActionListener() {
+           @Override
+           public void actionPerformed(ActionEvent ae) {
+                pn_utama.removeAll();
+                pn_utama.add(new Daftar_PKL());
+                pn_utama.repaint();
+                pn_utama.revalidate();
+           }
+       });
+       
+       MenuItem Wisuda = new MenuItem(null, true, iconDaftar, "Daftar Wisuda", new ActionListener() {
+           @Override
+           public void actionPerformed(ActionEvent ae) {
+                pn_utama.removeAll();
+                pn_utama.add(new Daftar_Wisuda());
+                pn_utama.repaint();
+                pn_utama.revalidate();
+           }
+       });
        
        MenuItem TanggalKKN = new MenuItem(null, true, iconDate, "Jadwal KKN", null);
        MenuItem TanggalPKL_PPL = new MenuItem(null, true, iconDate, "Jadwal PKL/PPL", null);
