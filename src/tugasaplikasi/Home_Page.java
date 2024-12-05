@@ -205,9 +205,35 @@ public class Home_Page extends javax.swing.JFrame {
            }
        });
        
-       MenuItem TanggalKKN = new MenuItem(null, true, iconDate, "Jadwal KKN", null);
-       MenuItem TanggalPKL_PPL = new MenuItem(null, true, iconDate, "Jadwal PKL/PPL", null);
-       MenuItem TanggalWisuda = new MenuItem(null, true, iconDate, "Jadwal Wisuda", null);
+       MenuItem TanggalKKN = new MenuItem(null, true, iconDate, "Jadwal KKN", new ActionListener() {
+           @Override
+           public void actionPerformed(ActionEvent ae) {
+                pn_utama.removeAll();
+                pn_utama.add(new Jadwal_KKN());
+                pn_utama.repaint();
+                pn_utama.revalidate();
+           }
+       });
+       
+       MenuItem TanggalPKL_PPL = new MenuItem(null, true, iconDate, "Jadwal PKL/PPL", new ActionListener() {
+           @Override
+           public void actionPerformed(ActionEvent ae) {
+                pn_utama.removeAll();
+                pn_utama.add(new Jadwal_PKL());
+                pn_utama.repaint();
+                pn_utama.revalidate();
+           }
+       });
+       
+       MenuItem TanggalWisuda = new MenuItem(null, true, iconDate, "Jadwal Wisuda", new ActionListener() {
+           @Override
+           public void actionPerformed(ActionEvent ae) {
+                pn_utama.removeAll();
+                pn_utama.add(new Jadwal_Wisuda());
+                pn_utama.repaint();
+                pn_utama.revalidate();
+           }
+       });
 
        MenuItem menuHome  = new MenuItem(iconHome, false, null, "Home", new ActionListener() {
            @Override
@@ -218,9 +244,19 @@ public class Home_Page extends javax.swing.JFrame {
                 pn_utama.revalidate();
            }
        });
+       
        MenuItem menuDaftar  = new MenuItem(iconDaftar, false, null, "Pendaftaran", null, KKN, PKL_PPL, Wisuda);
        MenuItem menuTanggal  = new MenuItem(iconDate, false, null, "Tanggal Pelaksanaan", null, TanggalKKN, TanggalPKL_PPL, TanggalWisuda);
-       MenuItem menuProfile  = new MenuItem(iconUser, false, null, "Profile", null);
+       
+       MenuItem menuProfile  = new MenuItem(iconUser, false, null, "Profile", new ActionListener() {
+           @Override
+           public void actionPerformed(ActionEvent ae) {
+                pn_utama.removeAll();
+                pn_utama.add(new Content_Profile());
+                pn_utama.repaint();
+                pn_utama.revalidate();
+           }
+       });
        
        addMenu(menuHome, menuDaftar, menuTanggal, menuProfile);
     }
