@@ -2,18 +2,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package tugasaplikasi;
+package Content;
 
 /**
  *
  * @author Viann
  */
-public class Content_Home extends javax.swing.JPanel {
+public class Content_HomeAdmin extends javax.swing.JPanel {
 
     /**
      * Creates new form Content_Home
      */
-    public Content_Home() {
+    public Content_HomeAdmin() {
         initComponents();
     }
 
@@ -26,7 +26,6 @@ public class Content_Home extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        LogoHome = new javax.swing.JLabel();
         Home = new javax.swing.JLabel();
         Apa = new javax.swing.JLabel();
         Yang = new javax.swing.JLabel();
@@ -38,8 +37,6 @@ public class Content_Home extends javax.swing.JPanel {
         ln_Wisuda = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
-
-        LogoHome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/Logo HomePage.png"))); // NOI18N
 
         Home.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         Home.setForeground(new java.awt.Color(0, 153, 153));
@@ -103,11 +100,7 @@ public class Content_Home extends javax.swing.JPanel {
                             .addComponent(ln_KKN)
                             .addComponent(ln_PKL)
                             .addComponent(ln_Wisuda))))
-                .addContainerGap(564, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(LogoHome)
-                .addGap(15, 15, 15))
+                .addContainerGap(502, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -128,9 +121,7 @@ public class Content_Home extends javax.swing.JPanel {
                 .addComponent(ln_PKL)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(ln_Wisuda)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
-                .addComponent(LogoHome, javax.swing.GroupLayout.PREFERRED_SIZE, 323, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(15, 15, 15))
+                .addContainerGap(398, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -140,7 +131,6 @@ public class Content_Home extends javax.swing.JPanel {
     private javax.swing.JLabel Daftar;
     private javax.swing.JLabel Home;
     private javax.swing.JLabel Kamu;
-    private javax.swing.JLabel LogoHome;
     private javax.swing.JLabel Mau;
     private javax.swing.JLabel Yang;
     private javax.swing.JLabel ln_KKN;

@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package tugasaplikasi;
+package Content;
 
 /**
  *
@@ -29,6 +29,7 @@ public class Jadwal_KKN extends javax.swing.JPanel {
         MainPanel = new javax.swing.JPanel();
         ForumPendaftaran = new javax.swing.JPanel();
         Home = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setLayout(new java.awt.CardLayout());
 
@@ -41,6 +42,8 @@ public class Jadwal_KKN extends javax.swing.JPanel {
         Home.setForeground(new java.awt.Color(0, 153, 153));
         Home.setText("Tanggal Pelaksanaan / Jadwal KKN");
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/Jadwal_KKN.png"))); // NOI18N
+
         javax.swing.GroupLayout ForumPendaftaranLayout = new javax.swing.GroupLayout(ForumPendaftaran);
         ForumPendaftaran.setLayout(ForumPendaftaranLayout);
         ForumPendaftaranLayout.setHorizontalGroup(
@@ -48,13 +51,18 @@ public class Jadwal_KKN extends javax.swing.JPanel {
             .addGroup(ForumPendaftaranLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(Home)
-                .addContainerGap(391, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(ForumPendaftaranLayout.createSequentialGroup()
+                .addComponent(jLabel1)
+                .addGap(0, 151, Short.MAX_VALUE))
         );
         ForumPendaftaranLayout.setVerticalGroup(
             ForumPendaftaranLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ForumPendaftaranLayout.createSequentialGroup()
                 .addComponent(Home)
-                .addContainerGap(551, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel1)
+                .addGap(0, 892, Short.MAX_VALUE))
         );
 
         MainPanel.add(ForumPendaftaran, "card2");
@@ -67,5 +75,6 @@ public class Jadwal_KKN extends javax.swing.JPanel {
     private javax.swing.JPanel ForumPendaftaran;
     private javax.swing.JLabel Home;
     private javax.swing.JPanel MainPanel;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

@@ -2,7 +2,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package tugasaplikasi;
+package Login;
+
+import MenuAdmin.Home_PageAdmin;
+import MenuUser.Home_Page;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -31,13 +35,13 @@ public class Login extends javax.swing.JFrame {
         jPanel5 = new javax.swing.JPanel();
         jPanel11 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        username = new javax.swing.JTextField();
         jPanel7 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        nim = new javax.swing.JTextField();
         jPanel6 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jPasswordField1 = new javax.swing.JPasswordField();
+        password = new javax.swing.JPasswordField();
         jPanel9 = new javax.swing.JPanel();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
@@ -69,7 +73,7 @@ public class Login extends javax.swing.JFrame {
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
         jPanel4.setPreferredSize(new java.awt.Dimension(400, 100));
-        jPanel4.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 5, 20));
+        jPanel4.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 5, 10));
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(0, 102, 102));
@@ -96,14 +100,14 @@ public class Login extends javax.swing.JFrame {
         jLabel7.setPreferredSize(new java.awt.Dimension(74, 10));
         jPanel11.add(jLabel7, java.awt.BorderLayout.PAGE_START);
 
-        jTextField3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 153)));
-        jTextField3.setPreferredSize(new java.awt.Dimension(64, 28));
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        username.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 153)));
+        username.setPreferredSize(new java.awt.Dimension(64, 28));
+        username.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                usernameActionPerformed(evt);
             }
         });
-        jPanel11.add(jTextField3, java.awt.BorderLayout.PAGE_END);
+        jPanel11.add(username, java.awt.BorderLayout.PAGE_END);
 
         jPanel5.add(jPanel11);
 
@@ -116,14 +120,14 @@ public class Login extends javax.swing.JFrame {
         jLabel3.setPreferredSize(new java.awt.Dimension(74, 10));
         jPanel7.add(jLabel3, java.awt.BorderLayout.PAGE_START);
 
-        jTextField2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 153)));
-        jTextField2.setPreferredSize(new java.awt.Dimension(64, 28));
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        nim.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 153)));
+        nim.setPreferredSize(new java.awt.Dimension(64, 28));
+        nim.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                nimActionPerformed(evt);
             }
         });
-        jPanel7.add(jTextField2, java.awt.BorderLayout.PAGE_END);
+        jPanel7.add(nim, java.awt.BorderLayout.PAGE_END);
 
         jPanel5.add(jPanel7);
 
@@ -135,9 +139,9 @@ public class Login extends javax.swing.JFrame {
         jLabel2.setPreferredSize(new java.awt.Dimension(50, 10));
         jPanel6.add(jLabel2, java.awt.BorderLayout.CENTER);
 
-        jPasswordField1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 153)));
-        jPasswordField1.setPreferredSize(new java.awt.Dimension(64, 28));
-        jPanel6.add(jPasswordField1, java.awt.BorderLayout.PAGE_END);
+        password.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 153)));
+        password.setPreferredSize(new java.awt.Dimension(64, 28));
+        jPanel6.add(password, java.awt.BorderLayout.PAGE_END);
 
         jPanel5.add(jPanel6);
 
@@ -256,8 +260,7 @@ public class Login extends javax.swing.JFrame {
             .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(20, 20, 20))
+                .addComponent(jPanel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -273,13 +276,9 @@ public class Login extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void usernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usernameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
-
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_usernameActionPerformed
 
     private void formMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMousePressed
         xx = evt.getX(); //Jika mouse ditekan code ini mengambil getX
@@ -297,20 +296,33 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel4MouseClicked
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        Home_Page menu = new Home_Page();
-        menu.setVisible(true);
-        menu.revalidate();
-
-        dispose();
+        String user=username.getText();
+        String pass=password.getText();
+        String nomerinduk=nim.getText();
+        
+        if (user.equals("admin") && nomerinduk.equals("123") && pass.equals("admin123")){
+            new Home_PageAdmin().setVisible(true);
+            this.setVisible(false);
+        } else if (user.equals("user") && nomerinduk.equals("23103041") && pass.equals("user123")){
+              Home_Page menu = new Home_Page(); 
+              menu.setVisible(true);
+              menu.revalidate();  
+              this.setVisible(false);
+        } else {
+                JOptionPane.showMessageDialog(null, "Masukan Data");
+        } 
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         SingUp menu = new SingUp();
         menu.setVisible(true);
         menu.revalidate();
-
         dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void nimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nimActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nimActionPerformed
 
     /**
      * @param args the command line arguments
@@ -323,7 +335,7 @@ public class Login extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbua".equals(info.getName())) {
+                if ("".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
@@ -370,8 +382,8 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel9;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField nim;
+    private javax.swing.JPasswordField password;
+    private javax.swing.JTextField username;
     // End of variables declaration//GEN-END:variables
 }

@@ -2,12 +2,20 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package tugasaplikasi;
+package MenuUser;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import javax.swing.ImageIcon;
+import Content.Content_Home;
+import Content.Content_Profile;
+import Content.Daftar_KKN;
+import Content.Daftar_PKL;
+import Content.Daftar_Wisuda;
+import Content.Jadwal_KKN;
+import Content.Jadwal_PKL;
+import Content.Jadwal_Wisuda;
 
 /**
  *
@@ -58,7 +66,7 @@ public class Home_Page extends javax.swing.JFrame {
         pn_navbarLayout.setHorizontalGroup(
             pn_navbarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pn_navbarLayout.createSequentialGroup()
-                .addContainerGap(624, Short.MAX_VALUE)
+                .addContainerGap(621, Short.MAX_VALUE)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -135,7 +143,7 @@ public class Home_Page extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
@@ -171,7 +179,6 @@ public class Home_Page extends javax.swing.JFrame {
 
     private void execute() {
        ImageIcon iconHome = new ImageIcon(getClass().getResource("/Icon/Home.png")); 
-       ImageIcon iconUser = new ImageIcon(getClass().getResource("/Icon/User.png"));
        ImageIcon iconDate = new ImageIcon(getClass().getResource("/Icon/Calendar.png"));
        ImageIcon iconDaftar = new ImageIcon(getClass().getResource("/Icon/Form.png"));
        
@@ -185,7 +192,7 @@ public class Home_Page extends javax.swing.JFrame {
            }
        } );
        
-       MenuItem PKL_PPL = new MenuItem(null, true, iconDaftar, "Daftar PKL/PPL", new ActionListener() {
+       MenuItem PKL_PPL = new MenuItem(null, true, iconDaftar, "Daftar PKL", new ActionListener() {
            @Override
            public void actionPerformed(ActionEvent ae) {
                 pn_utama.removeAll();
@@ -215,7 +222,7 @@ public class Home_Page extends javax.swing.JFrame {
            }
        });
        
-       MenuItem TanggalPKL_PPL = new MenuItem(null, true, iconDate, "Jadwal PKL/PPL", new ActionListener() {
+       MenuItem TanggalPKL_PPL = new MenuItem(null, true, iconDate, "Jadwal PKL", new ActionListener() {
            @Override
            public void actionPerformed(ActionEvent ae) {
                 pn_utama.removeAll();
@@ -248,17 +255,8 @@ public class Home_Page extends javax.swing.JFrame {
        MenuItem menuDaftar  = new MenuItem(iconDaftar, false, null, "Pendaftaran", null, KKN, PKL_PPL, Wisuda);
        MenuItem menuTanggal  = new MenuItem(iconDate, false, null, "Tanggal Pelaksanaan", null, TanggalKKN, TanggalPKL_PPL, TanggalWisuda);
        
-       MenuItem menuProfile  = new MenuItem(iconUser, false, null, "Profile", new ActionListener() {
-           @Override
-           public void actionPerformed(ActionEvent ae) {
-                pn_utama.removeAll();
-                pn_utama.add(new Content_Profile());
-                pn_utama.repaint();
-                pn_utama.revalidate();
-           }
-       });
        
-       addMenu(menuHome, menuDaftar, menuTanggal, menuProfile);
+       addMenu(menuHome, menuDaftar, menuTanggal);
     }
     
     private void addMenu(MenuItem... menu) {

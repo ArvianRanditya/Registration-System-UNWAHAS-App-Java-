@@ -2,8 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package tugasaplikasi;
+package MenuUser;
 
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -14,7 +15,7 @@ import javax.swing.Icon;
  * @author Viann
  */
 public class MenuItem extends javax.swing.JPanel {
-
+    
     /**
      * Creates new form MenuItem
      * @return 
@@ -34,6 +35,8 @@ public class MenuItem extends javax.swing.JPanel {
         lb_menu.setText(menu);
         lb_subicon.setIcon(subicon);
         lb_subicon.setVisible(sbm);
+        
+
         
         if (act != null){
             this.act = act;
@@ -63,13 +66,19 @@ public class MenuItem extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(255, 255, 255));
         addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                formMouseClicked(evt);
+            }
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 formMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                formMouseReleased(evt);
             }
         });
 
         lb_menu.setForeground(new java.awt.Color(0, 153, 153));
-        lb_menu.setText("MenuItem...");
+        lb_menu.setText("  MenuItem...");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -87,19 +96,24 @@ public class MenuItem extends javax.swing.JPanel {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(0, 0, 0)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lb_menu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(lb_icon, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(lb_subicon, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap())
+                .addGap(0, 0, 0))
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private boolean showing = false;
     private void formMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMousePressed
+        lb_menu.setOpaque(true);
+        lb_menu.setBackground(new Color(0, 102, 102));
+        lb_menu.setForeground(Color.white);
         setBackground(new java.awt.Color(255,255,255));
+        
+
         if (showing){
             hideMenu();
         } else {
@@ -109,6 +123,19 @@ public class MenuItem extends javax.swing.JPanel {
             act.actionPerformed(null);
         }
     }//GEN-LAST:event_formMousePressed
+
+    private void formMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseClicked
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_formMouseClicked
+
+    private void formMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseReleased
+        // TODO add your handling code here:
+        lb_menu.setOpaque(true);
+        lb_menu.setBackground(Color.white);
+        lb_menu.setForeground(new Color(0, 153, 153));
+        setBackground(new java.awt.Color(255,255,255));
+    }//GEN-LAST:event_formMouseReleased
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

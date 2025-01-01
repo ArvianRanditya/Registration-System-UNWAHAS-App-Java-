@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package tugasaplikasi;
+package Login;
 
 /**
  *
@@ -40,22 +40,22 @@ public class SingUp extends javax.swing.JFrame {
         jPanel5 = new javax.swing.JPanel();
         jPanel11 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        nama = new javax.swing.JTextField();
         jPanel7 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        nim = new javax.swing.JTextField();
         jPanel6 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jPasswordField1 = new javax.swing.JPasswordField();
+        fakultas = new javax.swing.JPasswordField();
         jPanel12 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
+        prodi = new javax.swing.JTextField();
         jPanel13 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
+        hape = new javax.swing.JTextField();
         jPanel14 = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
+        emial = new javax.swing.JTextField();
         jPanel9 = new javax.swing.JPanel();
         jButton2 = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
@@ -80,14 +80,14 @@ public class SingUp extends javax.swing.JFrame {
         jLabel7.setPreferredSize(new java.awt.Dimension(74, 10));
         jPanel11.add(jLabel7, java.awt.BorderLayout.PAGE_START);
 
-        jTextField3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 153)));
-        jTextField3.setPreferredSize(new java.awt.Dimension(64, 28));
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        nama.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 153)));
+        nama.setPreferredSize(new java.awt.Dimension(64, 28));
+        nama.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                namaActionPerformed(evt);
             }
         });
-        jPanel11.add(jTextField3, java.awt.BorderLayout.PAGE_END);
+        jPanel11.add(nama, java.awt.BorderLayout.PAGE_END);
 
         jPanel5.add(jPanel11);
 
@@ -100,14 +100,14 @@ public class SingUp extends javax.swing.JFrame {
         jLabel3.setPreferredSize(new java.awt.Dimension(74, 10));
         jPanel7.add(jLabel3, java.awt.BorderLayout.PAGE_START);
 
-        jTextField2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 153)));
-        jTextField2.setPreferredSize(new java.awt.Dimension(64, 28));
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        nim.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 153)));
+        nim.setPreferredSize(new java.awt.Dimension(64, 28));
+        nim.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                nimActionPerformed(evt);
             }
         });
-        jPanel7.add(jTextField2, java.awt.BorderLayout.PAGE_END);
+        jPanel7.add(nim, java.awt.BorderLayout.PAGE_END);
 
         jPanel5.add(jPanel7);
 
@@ -119,9 +119,9 @@ public class SingUp extends javax.swing.JFrame {
         jLabel2.setPreferredSize(new java.awt.Dimension(50, 10));
         jPanel6.add(jLabel2, java.awt.BorderLayout.CENTER);
 
-        jPasswordField1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 153)));
-        jPasswordField1.setPreferredSize(new java.awt.Dimension(64, 28));
-        jPanel6.add(jPasswordField1, java.awt.BorderLayout.PAGE_END);
+        fakultas.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 153)));
+        fakultas.setPreferredSize(new java.awt.Dimension(64, 28));
+        jPanel6.add(fakultas, java.awt.BorderLayout.PAGE_END);
 
         jPanel5.add(jPanel6);
 
@@ -134,14 +134,14 @@ public class SingUp extends javax.swing.JFrame {
         jLabel8.setPreferredSize(new java.awt.Dimension(74, 10));
         jPanel12.add(jLabel8, java.awt.BorderLayout.PAGE_START);
 
-        jTextField4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 153)));
-        jTextField4.setPreferredSize(new java.awt.Dimension(64, 28));
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+        prodi.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 153)));
+        prodi.setPreferredSize(new java.awt.Dimension(64, 28));
+        prodi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
+                prodiActionPerformed(evt);
             }
         });
-        jPanel12.add(jTextField4, java.awt.BorderLayout.PAGE_END);
+        jPanel12.add(prodi, java.awt.BorderLayout.PAGE_END);
 
         jPanel5.add(jPanel12);
 
@@ -154,14 +154,14 @@ public class SingUp extends javax.swing.JFrame {
         jLabel9.setPreferredSize(new java.awt.Dimension(74, 10));
         jPanel13.add(jLabel9, java.awt.BorderLayout.PAGE_START);
 
-        jTextField5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 153)));
-        jTextField5.setPreferredSize(new java.awt.Dimension(64, 28));
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+        hape.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 153)));
+        hape.setPreferredSize(new java.awt.Dimension(64, 28));
+        hape.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
+                hapeActionPerformed(evt);
             }
         });
-        jPanel13.add(jTextField5, java.awt.BorderLayout.PAGE_END);
+        jPanel13.add(hape, java.awt.BorderLayout.PAGE_END);
 
         jPanel5.add(jPanel13);
 
@@ -174,14 +174,14 @@ public class SingUp extends javax.swing.JFrame {
         jLabel11.setPreferredSize(new java.awt.Dimension(74, 10));
         jPanel14.add(jLabel11, java.awt.BorderLayout.PAGE_START);
 
-        jTextField6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 153)));
-        jTextField6.setPreferredSize(new java.awt.Dimension(64, 28));
-        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+        emial.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 153)));
+        emial.setPreferredSize(new java.awt.Dimension(64, 28));
+        emial.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField6ActionPerformed(evt);
+                emialActionPerformed(evt);
             }
         });
-        jPanel14.add(jTextField6, java.awt.BorderLayout.PAGE_END);
+        jPanel14.add(emial, java.awt.BorderLayout.PAGE_END);
 
         jPanel5.add(jPanel14);
 
@@ -256,13 +256,13 @@ public class SingUp extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void namaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_namaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_namaActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void nimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nimActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_nimActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         Login menu = new Login();
@@ -272,17 +272,17 @@ public class SingUp extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+    private void prodiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_prodiActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    }//GEN-LAST:event_prodiActionPerformed
 
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+    private void hapeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hapeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
+    }//GEN-LAST:event_hapeActionPerformed
 
-    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+    private void emialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emialActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField6ActionPerformed
+    }//GEN-LAST:event_emialActionPerformed
 
     /**
      * @param args the command line arguments
@@ -322,6 +322,9 @@ public class SingUp extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Background;
+    private javax.swing.JTextField emial;
+    private javax.swing.JPasswordField fakultas;
+    private javax.swing.JTextField hape;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -340,11 +343,8 @@ public class SingUp extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel9;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField nama;
+    private javax.swing.JTextField nim;
+    private javax.swing.JTextField prodi;
     // End of variables declaration//GEN-END:variables
 }

@@ -2,18 +2,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package tugasaplikasi;
+package Content;
 
 /**
  *
  * @author Viann
  */
-public class Content_Profile extends javax.swing.JPanel {
+public class Jadwal_PKL extends javax.swing.JPanel {
 
     /**
      * Creates new form Daftar_KKN
      */
-    public Content_Profile() {
+    public Jadwal_PKL() {
         initComponents();
     }
 
@@ -29,6 +29,7 @@ public class Content_Profile extends javax.swing.JPanel {
         MainPanel = new javax.swing.JPanel();
         ForumPendaftaran = new javax.swing.JPanel();
         Home = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setLayout(new java.awt.CardLayout());
 
@@ -39,7 +40,9 @@ public class Content_Profile extends javax.swing.JPanel {
 
         Home.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         Home.setForeground(new java.awt.Color(0, 153, 153));
-        Home.setText("Profile");
+        Home.setText("Tanggal Pelaksanaan / Jadwal PKL");
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/Jadwal_PKL.png"))); // NOI18N
 
         javax.swing.GroupLayout ForumPendaftaranLayout = new javax.swing.GroupLayout(ForumPendaftaran);
         ForumPendaftaran.setLayout(ForumPendaftaranLayout);
@@ -47,14 +50,18 @@ public class Content_Profile extends javax.swing.JPanel {
             ForumPendaftaranLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ForumPendaftaranLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(Home)
-                .addContainerGap(716, Short.MAX_VALUE))
+                .addGroup(ForumPendaftaranLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Home)
+                    .addComponent(jLabel1))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         ForumPendaftaranLayout.setVerticalGroup(
             ForumPendaftaranLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ForumPendaftaranLayout.createSequentialGroup()
                 .addComponent(Home)
-                .addContainerGap(551, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel1)
+                .addContainerGap(529, Short.MAX_VALUE))
         );
 
         MainPanel.add(ForumPendaftaran, "card2");
@@ -67,5 +74,6 @@ public class Content_Profile extends javax.swing.JPanel {
     private javax.swing.JPanel ForumPendaftaran;
     private javax.swing.JLabel Home;
     private javax.swing.JPanel MainPanel;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

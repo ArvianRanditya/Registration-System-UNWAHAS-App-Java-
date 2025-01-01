@@ -2,18 +2,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package tugasaplikasi;
+package Content;
 
 /**
  *
  * @author Viann
  */
-public class Jadwal_PKL extends javax.swing.JPanel {
+public class Content_Profile extends javax.swing.JPanel {
 
     /**
      * Creates new form Daftar_KKN
      */
-    public Jadwal_PKL() {
+    public Content_Profile() {
         initComponents();
     }
 
@@ -39,7 +39,7 @@ public class Jadwal_PKL extends javax.swing.JPanel {
 
         Home.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         Home.setForeground(new java.awt.Color(0, 153, 153));
-        Home.setText("Tanggal Pelaksanaan / Jadwal PKL");
+        Home.setText("Profile");
 
         javax.swing.GroupLayout ForumPendaftaranLayout = new javax.swing.GroupLayout(ForumPendaftaran);
         ForumPendaftaran.setLayout(ForumPendaftaranLayout);
@@ -48,7 +48,7 @@ public class Jadwal_PKL extends javax.swing.JPanel {
             .addGroup(ForumPendaftaranLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(Home)
-                .addContainerGap(399, Short.MAX_VALUE))
+                .addContainerGap(716, Short.MAX_VALUE))
         );
         ForumPendaftaranLayout.setVerticalGroup(
             ForumPendaftaranLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
