@@ -309,7 +309,7 @@ public class Login extends javax.swing.JFrame {
               menu.revalidate();  
               this.setVisible(false);
         } else {
-                JOptionPane.showMessageDialog(null, "Masukan Data");
+                JOptionPane.showMessageDialog(null, "Masukan Data Yang Benar");
         } 
     }//GEN-LAST:event_jButton2ActionPerformed
 

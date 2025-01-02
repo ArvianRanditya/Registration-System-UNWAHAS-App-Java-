@@ -11,7 +11,6 @@ import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import Content.Content_Home;
 import Content.Content_HomeAdmin;
-import Content.Content_Profile;
 import Content.Daftar_KKN;
 import Content.Daftar_PKL;
 import Content.Daftar_Wisuda;
@@ -218,7 +217,7 @@ public class Home_PageAdmin extends javax.swing.JFrame {
            @Override
            public void actionPerformed(ActionEvent ae) {
                 pn_utama.removeAll();
-                pn_utama.add(new Content_Home());
+                pn_utama.add(new Content_HomeAdmin());
                 pn_utama.repaint();
                 pn_utama.revalidate();
            }

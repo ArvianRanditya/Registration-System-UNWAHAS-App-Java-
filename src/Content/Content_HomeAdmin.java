@@ -35,6 +35,7 @@ public class Content_HomeAdmin extends javax.swing.JPanel {
         ln_KKN = new javax.swing.JLabel();
         ln_PKL = new javax.swing.JLabel();
         ln_Wisuda = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
@@ -75,6 +76,8 @@ public class Content_HomeAdmin extends javax.swing.JPanel {
         ln_Wisuda.setForeground(new java.awt.Color(0, 153, 153));
         ln_Wisuda.setText("- Daftar Wisuda");
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/Logo Admin.png"))); // NOI18N
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -101,6 +104,10 @@ public class Content_HomeAdmin extends javax.swing.JPanel {
                             .addComponent(ln_PKL)
                             .addComponent(ln_Wisuda))))
                 .addContainerGap(502, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(15, 15, 15))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -121,7 +128,9 @@ public class Content_HomeAdmin extends javax.swing.JPanel {
                 .addComponent(ln_PKL)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(ln_Wisuda)
-                .addContainerGap(398, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(52, 52, 52))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -133,6 +142,7 @@ public class Content_HomeAdmin extends javax.swing.JPanel {
     private javax.swing.JLabel Kamu;
     private javax.swing.JLabel Mau;
     private javax.swing.JLabel Yang;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel ln_KKN;
     private javax.swing.JLabel ln_PKL;
     private javax.swing.JLabel ln_Wisuda;
