@@ -50,10 +50,11 @@ public class Jadwal_PKL extends javax.swing.JPanel {
             ForumPendaftaranLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ForumPendaftaranLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(ForumPendaftaranLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Home)
-                    .addComponent(jLabel1))
+                .addComponent(Home)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(ForumPendaftaranLayout.createSequentialGroup()
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1092, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 65, Short.MAX_VALUE))
         );
         ForumPendaftaranLayout.setVerticalGroup(
             ForumPendaftaranLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

@@ -157,7 +157,7 @@ public class Daftar_PKL extends javax.swing.JPanel {
         Hapus.setBackground(new java.awt.Color(0, 102, 102));
         Hapus.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         Hapus.setForeground(new java.awt.Color(255, 255, 255));
-        Hapus.setText("HAPUS");
+        Hapus.setText("BERSIHKAN");
         Hapus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 HapusActionPerformed(evt);

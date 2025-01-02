@@ -46,35 +46,35 @@ public class Content_HomeAdmin extends javax.swing.JPanel {
         Apa.setBackground(new java.awt.Color(0, 102, 102));
         Apa.setFont(new java.awt.Font("Segoe UI", 1, 56)); // NOI18N
         Apa.setForeground(new java.awt.Color(0, 153, 153));
-        Apa.setText("Apa");
+        Apa.setText("Selamat");
 
         Yang.setFont(new java.awt.Font("Segoe UI", 0, 56)); // NOI18N
         Yang.setForeground(new java.awt.Color(0, 153, 153));
-        Yang.setText("Yang");
+        Yang.setText("Datang");
 
         Kamu.setFont(new java.awt.Font("Segoe UI", 0, 56)); // NOI18N
         Kamu.setForeground(new java.awt.Color(0, 153, 153));
-        Kamu.setText("Kamu");
+        Kamu.setText("Di");
 
         Mau.setFont(new java.awt.Font("Segoe UI", 0, 56)); // NOI18N
         Mau.setForeground(new java.awt.Color(0, 153, 153));
-        Mau.setText("Mau");
+        Mau.setText("Page");
 
         Daftar.setFont(new java.awt.Font("Segoe UI", 1, 56)); // NOI18N
         Daftar.setForeground(new java.awt.Color(0, 153, 153));
-        Daftar.setText("Daftar??");
+        Daftar.setText("Admin");
 
         ln_KKN.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         ln_KKN.setForeground(new java.awt.Color(0, 153, 153));
-        ln_KKN.setText("- Daftar KKN");
+        ln_KKN.setText("- Edit Data KKN");
 
         ln_PKL.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         ln_PKL.setForeground(new java.awt.Color(0, 153, 153));
-        ln_PKL.setText("- Daftar PKL/PPL");
+        ln_PKL.setText("- Edit Data PKL/PPL");
 
         ln_Wisuda.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         ln_Wisuda.setForeground(new java.awt.Color(0, 153, 153));
-        ln_Wisuda.setText("- Daftar Wisuda");
+        ln_Wisuda.setText("- Edit Data Wisuda");
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/Logo Admin.png"))); // NOI18N
 
@@ -103,7 +103,7 @@ public class Content_HomeAdmin extends javax.swing.JPanel {
                             .addComponent(ln_KKN)
                             .addComponent(ln_PKL)
                             .addComponent(ln_Wisuda))))
-                .addContainerGap(502, Short.MAX_VALUE))
+                .addContainerGap(428, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jLabel1)

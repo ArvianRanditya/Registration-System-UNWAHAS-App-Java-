@@ -14,12 +14,12 @@ import javax.swing.JOptionPane;
  *
  * @author Viann
  */
-public class Daftar_Wisuda extends javax.swing.JPanel {
+public class EditData_KKN extends javax.swing.JPanel {
     int x=0;
     /**
      * Creates new form Daftar_KKN
      */
-    public Daftar_Wisuda() {
+    public EditData_KKN() {
         initComponents();
     }
 
@@ -54,6 +54,7 @@ public class Daftar_Wisuda extends javax.swing.JPanel {
         Submit = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         TBdata = new javax.swing.JTable();
+        Bersihkan = new javax.swing.JButton();
         Hapus = new javax.swing.JButton();
 
         setLayout(new java.awt.CardLayout());
@@ -65,7 +66,7 @@ public class Daftar_Wisuda extends javax.swing.JPanel {
 
         Home.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         Home.setForeground(new java.awt.Color(0, 153, 153));
-        Home.setText("Pendaftaran / Daftar Wisuda");
+        Home.setText("Edit Data / Data KKN");
 
         txtNama.setBackground(new java.awt.Color(255, 255, 255));
         txtNama.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 153)));
@@ -118,7 +119,7 @@ public class Daftar_Wisuda extends javax.swing.JPanel {
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(0, 153, 153));
-        jLabel9.setText("Surat Pengajuan Wisuda (Link GDrive)");
+        jLabel9.setText("Surat Pengajuan KKN (Link GDrive)");
 
         txtSurat.setBackground(new java.awt.Color(255, 255, 255));
         txtSurat.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 153, 153), 1, true));
@@ -154,10 +155,21 @@ public class Daftar_Wisuda extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(TBdata);
 
+        Bersihkan.setBackground(new java.awt.Color(0, 102, 102));
+        Bersihkan.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        Bersihkan.setForeground(new java.awt.Color(255, 255, 255));
+        Bersihkan.setText("BERSIHKAN");
+        Bersihkan.setToolTipText("");
+        Bersihkan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BersihkanActionPerformed(evt);
+            }
+        });
+
         Hapus.setBackground(new java.awt.Color(0, 102, 102));
         Hapus.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         Hapus.setForeground(new java.awt.Color(255, 255, 255));
-        Hapus.setText("BERSIHKAN");
+        Hapus.setText("HAPUS");
         Hapus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 HapusActionPerformed(evt);
@@ -169,24 +181,26 @@ public class Daftar_Wisuda extends javax.swing.JPanel {
         ForumPendaftaranLayout.setHorizontalGroup(
             ForumPendaftaranLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ForumPendaftaranLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(Home)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(ForumPendaftaranLayout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addGroup(ForumPendaftaranLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1)
                     .addGroup(ForumPendaftaranLayout.createSequentialGroup()
                         .addGroup(ForumPendaftaranLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtFakultas, javax.swing.GroupLayout.PREFERRED_SIZE, 504, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtProdi, javax.swing.GroupLayout.PREFERRED_SIZE, 504, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4)
-                            .addComponent(txtNama, javax.swing.GroupLayout.PREFERRED_SIZE, 504, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel1)
-                            .addComponent(txtNIM, javax.swing.GroupLayout.PREFERRED_SIZE, 504, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 93, Short.MAX_VALUE)
+                            .addGroup(ForumPendaftaranLayout.createSequentialGroup()
+                                .addGroup(ForumPendaftaranLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtFakultas, javax.swing.GroupLayout.PREFERRED_SIZE, 504, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtProdi, javax.swing.GroupLayout.PREFERRED_SIZE, 504, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel4)
+                                    .addComponent(txtNama, javax.swing.GroupLayout.PREFERRED_SIZE, 504, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel1)
+                                    .addComponent(txtNIM, javax.swing.GroupLayout.PREFERRED_SIZE, 504, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel2)
+                                    .addComponent(jLabel3))
+                                .addGap(0, 75, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ForumPendaftaranLayout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(Hapus, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(18, 18, 18)
                         .addGroup(ForumPendaftaranLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtAlamat, javax.swing.GroupLayout.PREFERRED_SIZE, 504, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel6)
@@ -197,10 +211,14 @@ public class Daftar_Wisuda extends javax.swing.JPanel {
                             .addComponent(txtSurat, javax.swing.GroupLayout.PREFERRED_SIZE, 504, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel9)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ForumPendaftaranLayout.createSequentialGroup()
-                                .addComponent(Hapus, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(Bersihkan, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(Submit, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addGap(40, 40, 40))
+            .addGroup(ForumPendaftaranLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(Home, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         ForumPendaftaranLayout.setVerticalGroup(
             ForumPendaftaranLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -242,9 +260,10 @@ public class Daftar_Wisuda extends javax.swing.JPanel {
                         .addComponent(txtSurat, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(28, 28, 28)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 164, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 166, Short.MAX_VALUE)
                 .addGroup(ForumPendaftaranLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Submit, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Bersihkan, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Hapus, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(25, 25, 25))
         );
@@ -267,7 +286,7 @@ public class Daftar_Wisuda extends javax.swing.JPanel {
         x = x+1;
     }//GEN-LAST:event_SubmitActionPerformed
 
-    private void HapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HapusActionPerformed
+    private void BersihkanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BersihkanActionPerformed
         // TODO add your handling code here:
         txtNama.setText("");
         txtNIM.setText("");
@@ -277,10 +296,24 @@ public class Daftar_Wisuda extends javax.swing.JPanel {
         txtNomer.setText("");
         txtKRS.setText("");
         txtSurat.setText("");     
+    }//GEN-LAST:event_BersihkanActionPerformed
+
+    private void HapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HapusActionPerformed
+        // TODO add your handling code here:
+        TBdata.setValueAt("", TBdata.getSelectedRow(), 0);
+        TBdata.setValueAt("", TBdata.getSelectedRow(), 1);
+        TBdata.setValueAt("", TBdata.getSelectedRow(), 2);
+        TBdata.setValueAt("", TBdata.getSelectedRow(), 3);
+        TBdata.setValueAt("", TBdata.getSelectedRow(), 4);
+        TBdata.setValueAt("", TBdata.getSelectedRow(), 5);
+        TBdata.setValueAt("", TBdata.getSelectedRow(), 6);
+        TBdata.setValueAt("", TBdata.getSelectedRow(), 7);
+     
     }//GEN-LAST:event_HapusActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Bersihkan;
     private javax.swing.JPanel ForumPendaftaran;
     private javax.swing.JButton Hapus;
     private javax.swing.JLabel Home;

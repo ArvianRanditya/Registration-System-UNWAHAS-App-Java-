@@ -36,6 +36,12 @@ public class Content_Home extends javax.swing.JPanel {
         ln_KKN = new javax.swing.JLabel();
         ln_PKL = new javax.swing.JLabel();
         ln_Wisuda = new javax.swing.JLabel();
+        Daftar1 = new javax.swing.JLabel();
+        ln_KKN1 = new javax.swing.JLabel();
+        ln_KKN2 = new javax.swing.JLabel();
+        ln_KKN3 = new javax.swing.JLabel();
+        Yang1 = new javax.swing.JLabel();
+        Daftar2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
@@ -64,7 +70,7 @@ public class Content_Home extends javax.swing.JPanel {
 
         Daftar.setFont(new java.awt.Font("Segoe UI", 1, 56)); // NOI18N
         Daftar.setForeground(new java.awt.Color(0, 153, 153));
-        Daftar.setText("Daftar??");
+        Daftar.setText("Atau");
 
         ln_KKN.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         ln_KKN.setForeground(new java.awt.Color(0, 153, 153));
@@ -77,6 +83,30 @@ public class Content_Home extends javax.swing.JPanel {
         ln_Wisuda.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         ln_Wisuda.setForeground(new java.awt.Color(0, 153, 153));
         ln_Wisuda.setText("- Daftar Wisuda");
+
+        Daftar1.setFont(new java.awt.Font("Segoe UI", 1, 56)); // NOI18N
+        Daftar1.setForeground(new java.awt.Color(0, 153, 153));
+        Daftar1.setText("Daftar??");
+
+        ln_KKN1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        ln_KKN1.setForeground(new java.awt.Color(0, 153, 153));
+        ln_KKN1.setText("- Jadwal KKN 2024");
+
+        ln_KKN2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        ln_KKN2.setForeground(new java.awt.Color(0, 153, 153));
+        ln_KKN2.setText("- Jadwal PKL 2024");
+
+        ln_KKN3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        ln_KKN3.setForeground(new java.awt.Color(0, 153, 153));
+        ln_KKN3.setText("- Jadwal Wisuda 2024");
+
+        Yang1.setFont(new java.awt.Font("Segoe UI", 0, 56)); // NOI18N
+        Yang1.setForeground(new java.awt.Color(0, 153, 153));
+        Yang1.setText("Mau");
+
+        Daftar2.setFont(new java.awt.Font("Segoe UI", 1, 56)); // NOI18N
+        Daftar2.setForeground(new java.awt.Color(0, 153, 153));
+        Daftar2.setText("Lihat");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -93,7 +123,7 @@ public class Content_Home extends javax.swing.JPanel {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(Mau)
                                 .addGap(18, 18, 18)
-                                .addComponent(Daftar))
+                                .addComponent(Daftar1))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(Apa)
                                 .addGap(18, 18, 18)
@@ -102,10 +132,19 @@ public class Content_Home extends javax.swing.JPanel {
                                 .addComponent(Kamu))
                             .addComponent(ln_KKN)
                             .addComponent(ln_PKL)
-                            .addComponent(ln_Wisuda))))
+                            .addComponent(ln_Wisuda)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(Daftar)
+                                .addGap(18, 18, 18)
+                                .addComponent(Yang1)
+                                .addGap(18, 18, 18)
+                                .addComponent(Daftar2))
+                            .addComponent(ln_KKN1)
+                            .addComponent(ln_KKN2)
+                            .addComponent(ln_KKN3))))
                 .addContainerGap(502, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(LogoHome)
                 .addGap(15, 15, 15))
         );
@@ -121,16 +160,31 @@ public class Content_Home extends javax.swing.JPanel {
                 .addGap(0, 0, 0)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Mau)
-                    .addComponent(Daftar))
+                    .addComponent(Daftar1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(ln_KKN)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(ln_PKL)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(ln_Wisuda)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
-                .addComponent(LogoHome, javax.swing.GroupLayout.PREFERRED_SIZE, 323, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(15, 15, 15))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
+                        .addComponent(LogoHome, javax.swing.GroupLayout.PREFERRED_SIZE, 323, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(15, 15, 15))
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(Daftar)
+                            .addComponent(Yang1)
+                            .addComponent(Daftar2))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(ln_KKN1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(ln_KKN2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(ln_KKN3)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -138,12 +192,18 @@ public class Content_Home extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Apa;
     private javax.swing.JLabel Daftar;
+    private javax.swing.JLabel Daftar1;
+    private javax.swing.JLabel Daftar2;
     private javax.swing.JLabel Home;
     private javax.swing.JLabel Kamu;
     private javax.swing.JLabel LogoHome;
     private javax.swing.JLabel Mau;
     private javax.swing.JLabel Yang;
+    private javax.swing.JLabel Yang1;
     private javax.swing.JLabel ln_KKN;
+    private javax.swing.JLabel ln_KKN1;
+    private javax.swing.JLabel ln_KKN2;
+    private javax.swing.JLabel ln_KKN3;
     private javax.swing.JLabel ln_PKL;
     private javax.swing.JLabel ln_Wisuda;
     // End of variables declaration//GEN-END:variables

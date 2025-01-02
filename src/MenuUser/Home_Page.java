@@ -181,7 +181,7 @@ public class Home_Page extends javax.swing.JFrame {
        ImageIcon iconDate = new ImageIcon(getClass().getResource("/Icon/Calendar.png"));
        ImageIcon iconDaftar = new ImageIcon(getClass().getResource("/Icon/Form.png"));
        
-       MenuItem KKN = new MenuItem(null, true, iconDaftar, "Daftar KKN", new ActionListener() {
+       MenuItem KKN = new MenuItem(null, true, iconDaftar, " Daftar KKN", new ActionListener() {
            @Override
            public void actionPerformed(ActionEvent ae) {
                 pn_utama.removeAll();
@@ -191,7 +191,7 @@ public class Home_Page extends javax.swing.JFrame {
            }
        } );
        
-       MenuItem PKL_PPL = new MenuItem(null, true, iconDaftar, "Daftar PKL", new ActionListener() {
+       MenuItem PKL_PPL = new MenuItem(null, true, iconDaftar, " Daftar PKL", new ActionListener() {
            @Override
            public void actionPerformed(ActionEvent ae) {
                 pn_utama.removeAll();
@@ -201,7 +201,7 @@ public class Home_Page extends javax.swing.JFrame {
            }
        });
        
-       MenuItem Wisuda = new MenuItem(null, true, iconDaftar, "Daftar Wisuda", new ActionListener() {
+       MenuItem Wisuda = new MenuItem(null, true, iconDaftar, " Daftar Wisuda", new ActionListener() {
            @Override
            public void actionPerformed(ActionEvent ae) {
                 pn_utama.removeAll();
@@ -211,7 +211,7 @@ public class Home_Page extends javax.swing.JFrame {
            }
        });
        
-       MenuItem TanggalKKN = new MenuItem(null, true, iconDate, "Jadwal KKN", new ActionListener() {
+       MenuItem TanggalKKN = new MenuItem(null, true, iconDate, " Jadwal KKN", new ActionListener() {
            @Override
            public void actionPerformed(ActionEvent ae) {
                 pn_utama.removeAll();
@@ -221,7 +221,7 @@ public class Home_Page extends javax.swing.JFrame {
            }
        });
        
-       MenuItem TanggalPKL_PPL = new MenuItem(null, true, iconDate, "Jadwal PKL", new ActionListener() {
+       MenuItem TanggalPKL_PPL = new MenuItem(null, true, iconDate, " Jadwal PKL", new ActionListener() {
            @Override
            public void actionPerformed(ActionEvent ae) {
                 pn_utama.removeAll();
@@ -231,7 +231,7 @@ public class Home_Page extends javax.swing.JFrame {
            }
        });
        
-       MenuItem TanggalWisuda = new MenuItem(null, true, iconDate, "Jadwal Wisuda", new ActionListener() {
+       MenuItem TanggalWisuda = new MenuItem(null, true, iconDate, " Jadwal Wisuda", new ActionListener() {
            @Override
            public void actionPerformed(ActionEvent ae) {
                 pn_utama.removeAll();
@@ -241,7 +241,7 @@ public class Home_Page extends javax.swing.JFrame {
            }
        });
 
-       MenuItem menuHome  = new MenuItem(iconHome, false, null, "Home", new ActionListener() {
+       MenuItem menuHome  = new MenuItem(iconHome, false, null, " Home", new ActionListener() {
            @Override
            public void actionPerformed(ActionEvent ae) {
                 pn_utama.removeAll();
@@ -251,8 +251,8 @@ public class Home_Page extends javax.swing.JFrame {
            }
        });
        
-       MenuItem menuDaftar  = new MenuItem(iconDaftar, false, null, "Pendaftaran", null, KKN, PKL_PPL, Wisuda);
-       MenuItem menuTanggal  = new MenuItem(iconDate, false, null, "Tanggal Pelaksanaan", null, TanggalKKN, TanggalPKL_PPL, TanggalWisuda);
+       MenuItem menuDaftar  = new MenuItem(iconDaftar, false, null, " Pendaftaran", null, KKN, PKL_PPL, Wisuda);
+       MenuItem menuTanggal  = new MenuItem(iconDate, false, null, " Tanggal Pelaksanaan", null, TanggalKKN, TanggalPKL_PPL, TanggalWisuda);
        
        
        addMenu(menuHome, menuDaftar, menuTanggal);

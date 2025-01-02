@@ -54,7 +54,7 @@ public class Jadwal_KKN extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(ForumPendaftaranLayout.createSequentialGroup()
                 .addComponent(jLabel1)
-                .addGap(0, 151, Short.MAX_VALUE))
+                .addGap(0, 155, Short.MAX_VALUE))
         );
         ForumPendaftaranLayout.setVerticalGroup(
             ForumPendaftaranLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -62,7 +62,7 @@ public class Jadwal_KKN extends javax.swing.JPanel {
                 .addComponent(Home)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel1)
-                .addGap(0, 892, Short.MAX_VALUE))
+                .addGap(0, 894, Short.MAX_VALUE))
         );
 
         MainPanel.add(ForumPendaftaran, "card2");

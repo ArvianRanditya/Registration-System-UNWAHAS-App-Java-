@@ -14,6 +14,9 @@ import Content.Content_HomeAdmin;
 import Content.Daftar_KKN;
 import Content.Daftar_PKL;
 import Content.Daftar_Wisuda;
+import Content.EditData_KKN;
+import Content.EditData_PKL;
+import Content.EditData_Wisuda;
 import Content.Jadwal_KKN;
 import Content.Jadwal_PKL;
 import Content.Jadwal_Wisuda;
@@ -183,37 +186,37 @@ public class Home_PageAdmin extends javax.swing.JFrame {
        ImageIcon iconHome = new ImageIcon(getClass().getResource("/Icon/Home.png")); 
        ImageIcon iconDaftar = new ImageIcon(getClass().getResource("/Icon/Form.png"));
        
-       MenuItem KKN = new MenuItem(null, true, iconDaftar, "Daftar KKN", new ActionListener() {
+       MenuItem KKN = new MenuItem(null, true, iconDaftar, " Data KKN", new ActionListener() {
            @Override
            public void actionPerformed(ActionEvent ae) {
                 pn_utama.removeAll();
-                pn_utama.add(new Daftar_KKN());
+                pn_utama.add(new EditData_KKN());
                 pn_utama.repaint();
                 pn_utama.revalidate();
            }
        } );
        
-       MenuItem PKL_PPL = new MenuItem(null, true, iconDaftar, "Daftar PKL", new ActionListener() {
+       MenuItem PKL_PPL = new MenuItem(null, true, iconDaftar, " Data PKL", new ActionListener() {
            @Override
            public void actionPerformed(ActionEvent ae) {
                 pn_utama.removeAll();
-                pn_utama.add(new Daftar_PKL());
+                pn_utama.add(new EditData_PKL());
                 pn_utama.repaint();
                 pn_utama.revalidate();
            }
        });
        
-       MenuItem Wisuda = new MenuItem(null, true, iconDaftar, "Daftar Wisuda", new ActionListener() {
+       MenuItem Wisuda = new MenuItem(null, true, iconDaftar, " Ddata Wisuda", new ActionListener() {
            @Override
            public void actionPerformed(ActionEvent ae) {
                 pn_utama.removeAll();
-                pn_utama.add(new Daftar_Wisuda());
+                pn_utama.add(new EditData_Wisuda());
                 pn_utama.repaint();
                 pn_utama.revalidate();
            }
        });
 
-       MenuItem menuHome  = new MenuItem(iconHome, false, null, "Home", new ActionListener() {
+       MenuItem menuHome  = new MenuItem(iconHome, false, null, " Home", new ActionListener() {
            @Override
            public void actionPerformed(ActionEvent ae) {
                 pn_utama.removeAll();
@@ -223,7 +226,7 @@ public class Home_PageAdmin extends javax.swing.JFrame {
            }
        });
        
-       MenuItem menuDaftar  = new MenuItem(iconDaftar, false, null, "Pendaftaran", null, KKN, PKL_PPL, Wisuda);
+       MenuItem menuDaftar  = new MenuItem(iconDaftar, false, null, " Edit Data", null, KKN, PKL_PPL, Wisuda);
        
        addMenu(menuHome, menuDaftar);
     }
